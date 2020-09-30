@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play / Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeNormal()">Normal</button>
+        <button onclick="makeSmall()">Small</button>
+        <br> <br>
+
+
+        <video width="430" id="video1">
+            <source src="./assets/video1.mp4" type="video/mp4">
+            Your browser doesnt support HTML video
+        </video>
+
+    </div>
+
+    <script>
+        var my_videos = document.querySelector('#video1');
+
+        function playPause() {
+            if (my_videos.paused) my_videos.play();
+            else my_videos.pause();
+        }
+
+        function makeBig() {
+            my_videos.width = 560;
+        }
+
+        function makeNormal() {
+            my_videos.width = 420;
+        }
+
+        function makeSmall() {
+            my_videos.width = 320;
+        }
+    </script>
+</body>
+
+</html>
